@@ -22,10 +22,11 @@ COPY  run-app.sh /opt/app-root/bin/
 
 EXPOSE 8080
 
-USER  wildfly
+#USER  wildfly
+USER 1001
 
 RUN chgrp -R 0 /opt/app-root && \
-    chmod -R g=u /opt/app-root
+	chmod -R g=u /opt/app-root
 
 
 
