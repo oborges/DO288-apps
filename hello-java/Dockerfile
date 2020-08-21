@@ -5,6 +5,7 @@ MAINTAINER   Red Hat Training <training@redhat.com>
 # command line options to pass to the JVM
 ENV	  JAVA_OPTIONS -Xmx512m
 
+USER 1001
 
 
 # Install the Java runtime, create a user for running the app, and set permissions
@@ -23,7 +24,7 @@ COPY  run-app.sh /opt/app-root/bin/
 
 EXPOSE 8080
 
-USER  wildfly
+#USER  wildfly
 
 
 RUN chmod -R g=u /opt/app-root && \
